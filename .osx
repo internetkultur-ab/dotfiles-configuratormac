@@ -222,6 +222,17 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 	OpenWith -bool true \
 	Privileges -bool true
 
+/opt/homebrew/bin/dockutil --no-restart --remove all
+
+/opt/homebrew/bin/dockutil --no-restart --add /System/Applications/System\ Settings.app/
+/opt/homebrew/bin/dockutil --no-restart --add /System/Applications/Utilities/Terminal.app/
+/opt/homebrew/bin/dockutil --no-restart --add /System/Applications/TextEdit.app/
+/opt/homebrew/bin/dockutil --no-restart --add /Applications/Apple\ Configurator.app/
+/opt/homebrew/bin/dockutil --no-restart --add '' --type spacer --section apps
+
+/opt/homebrew/bin/dockutil --add '~/Downloads' --view fan --display stack --sort dateadded
+/opt/homebrew/bin/dockutil --add '/Applications' --view list --display stack --sort name
+
 
 # Restart key applications to apply changes
 for app in "cfprefsd" "Dock" "Finder" "SystemUIServer"; do
