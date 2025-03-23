@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+dockutil --no-restart --remove all
+
+dockutil --no-restart --add /System/Applications/System\ Settings.app/
+dockutil --no-restart --add '' --type spacer --section apps
+
+dockutil --no-restart --add /System/Applications/Messages.app/
+dockutil --no-restart --add /Applications/Microsoft\ Teams.app/
+dockutil --no-restart --add /Applications/Signal.app/
+dockutil --no-restart --add /Applications/Discord.app/
+dockutil --no-restart --add /Applications/Thunderbird.app/
+dockutil --no-restart --add '' --type spacer --section apps
+
+dockutil --no-restart --add /Applications/Zen\ Browser.app/
+dockutil --no-restart --add /Applications/Google\ Chrome.app/
+dockutil --no-restart --add '' --type spacer --section apps
+
+dockutil --no-restart --add /System/Applications/Utilities/Terminal.app/
+dockutil --no-restart --add /Applications/Obsidian.app/
+dockutil --no-restart --add /Applications/Nova.app/
+dockutil --no-restart --add /Applications/Visual\ Studio\ Code.app/
+dockutil --no-restart --add /System/Applications/TextEdit.app/
+dockutil --no-restart --add '' --type spacer --section apps
+
+dockutil --no-restart --add /Applications/1Password.app/
+dockutil --no-restart --add /System/Applications/Photos.app/
+dockutil --no-restart --add /Applications/Toggl\ Track.app/
+dockutil --no-restart --add /Applications/Apple\ Configurator.app/
+dockutil --no-restart --add '' --type spacer --section apps
+
+dockutil --add '~/Downloads' --view fan --display stack --sort dateadded
+dockutil --add '~/Screenshots' --view fan --display stack --sort dateadded
+dockutil --add '~/Documents/3D' --view fan --display stack --sort dateadded
+dockutil --add '/Applications' --view list --display stack --sort name
+
+
+killall Dock
+
