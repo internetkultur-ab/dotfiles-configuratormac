@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-/usr/local/bin/dockutil --no-restart --remove all
+dockutil --no-restart --remove all
 
 dockutil --no-restart --add /System/Applications/System\ Settings.app/
 dockutil --no-restart --add /System/Applications/Utilities/Terminal.app/
