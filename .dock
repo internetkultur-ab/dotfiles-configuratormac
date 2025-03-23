@@ -13,4 +13,3 @@ dockutil --add '/Applications' --view list --display stack --sort name
 
 
 killall Dock
-
