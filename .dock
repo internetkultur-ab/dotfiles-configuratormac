@@ -12,4 +12,4 @@
 /opt/homebrew/bin/dockutil --add '/Applications' --view list --display stack --sort name
 
 
-killall Dock
+sudo killall Dock
